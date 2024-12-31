@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     const int SIZE = 10;
     int numbers[SIZE];
-    int remainders[SIZE] = {0}; // 배열 초기화
+    int remainders[SIZE]; // 배열 초기화
     int count = 0;
     bool isUnique;
 
