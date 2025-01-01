@@ -8,7 +8,7 @@ int main() {
     int counts[26] = {0};
     int max = 0;
     int maxNum = 0;
-    bool isDuplicated = false;
+    bool isDuplicated;
     
     for (string::size_type i = 0; i < word.length(); i++) {
         word[i] = toupper(word[i]);
