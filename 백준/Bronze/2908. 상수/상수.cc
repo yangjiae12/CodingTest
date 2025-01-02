@@ -1,26 +1,27 @@
 #include <iostream>
 using namespace std;
 
+void reverse(string &str);
+
 int main() {
-    string firstWord, secondWord;
-    cin >> firstWord;
-    cin >> secondWord;
+    string firstNum, secondNum;
+    cin >> firstNum >> secondNum;
     
-    int temp;
+    reverse(firstNum);
+    reverse(secondNum);
     
-    temp = firstWord[0];
-    firstWord[0] = firstWord[2];
-    firstWord[2] = temp;
-    
-    temp = secondWord[0];
-    secondWord[0] = secondWord[2];
-    secondWord[2] = temp;
-    
-    if (firstWord > secondWord) {
-        cout << firstWord << endl;
-    } else {
-        cout << secondWord << endl;
+    if (firstNum > secondNum) {
+        cout << firstNum << endl;
     }
-  
+    else {
+        cout << secondNum << endl;
+    }
+
     return 0;
+}
+
+void reverse(string &str) {
+    char temp = str[0];
+    str[0] = str[2];
+    str[2] = temp;
 }
