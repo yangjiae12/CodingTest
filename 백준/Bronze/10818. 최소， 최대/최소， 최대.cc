@@ -15,14 +15,10 @@ int main() {
     
     for (int j = 1; j < n; j++) {
         if (nums[j] < min) {
-            int temp = nums[j];
-            nums[j] = min;
-            min = temp;
+            min = nums[j];
         }
         if (nums[j] > max) {
-            int temp = nums[j];
-            nums[j] = max;
-            max = temp;
+            max = nums[j];
         }
     }
     
