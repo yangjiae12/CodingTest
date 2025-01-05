@@ -2,26 +2,20 @@
 using namespace std;
 
 int main() {
-    int min, max, n;
+    int n;
     cin >> n;
-    int nums[n] = {0};
-    
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];
+
+    int num;
+    cin >> num;
+    int min = num;
+    int max = num;
+
+    for (int i = 1; i < n; i++) {
+        cin >> num;
+        if (num < min) min = num;
+        if (num > max) max = num;
     }
-    
-    min = nums[0];
-    max = nums[0];
-    
-    for (int j = 1; j < n; j++) {
-        if (nums[j] < min) {
-            min = nums[j];
-        }
-        if (nums[j] > max) {
-            max = nums[j];
-        }
-    }
-    
+
     cout << min << " " << max << endl;
     return 0;
 }
